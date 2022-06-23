@@ -71,7 +71,6 @@ namespace AdventOfCode_21_9 {
           lowPoint &= n.Left == null || n.Left.Value > cell.Value;
           lowPoint &= n.Bottom == null || n.Bottom.Value > cell.Value;
 
-          cell.LowPoint = lowPoint;
           if (lowPoint)
             lowPoints.Add(cell);
         }

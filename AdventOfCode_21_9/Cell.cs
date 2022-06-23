@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace AdventOfCode_21_9 {
   public class CellNeighbours {
-    public Cell Top { get; set; }
-    public Cell Right { get; set; }
-    public Cell Bottom { get; set; }
-    public Cell Left { get; set; }
+    public Cell Top { get; }
+    public Cell Right { get; }
+    public Cell Bottom { get; }
+    public Cell Left { get; }
 
     public List<Cell> All {
       get { return new(new[] {Top, Left, Bottom, Right}); }
@@ -21,17 +21,14 @@ namespace AdventOfCode_21_9 {
   }
 
   public class Cell {
-    public int Value { get; set; }
-    public int X { get; set; }
-    public int Y { get; set; }
-
-    public bool LowPoint { get; set; }
+    public int Value { get; }
+    public int X { get; }
+    public int Y { get; }
 
     public Cell(int value, int x, int y) {
       Value = value;
       X = x;
       Y = y;
-      LowPoint = false;
     }
 
     public bool IsSame(Cell other) {

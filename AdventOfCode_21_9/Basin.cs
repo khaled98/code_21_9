@@ -2,8 +2,8 @@
 
 namespace AdventOfCode_21_9 {
   public class Basin {
-    public List<Cell> Cells { get; set; }
-    public Cell LowPoint { get; set; }
+    private List<Cell> Cells { get; }
+    private Cell LowPoint { get; }
 
     public Basin(Cell lowPoint) {
       Cells = new List<Cell>(new[] {lowPoint});
@@ -33,7 +33,7 @@ namespace AdventOfCode_21_9 {
       return Cells.Count;
     }
 
-    public bool AddCell(Cell cell) {
+    private bool AddCell(Cell cell) {
       if (cell == null || cell.Value >= 9 || cell.IsSame(LowPoint))
         return false;
 
