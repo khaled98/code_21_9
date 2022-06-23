@@ -4,12 +4,11 @@
     <projectFile>AdventOfCode_21_9/AdventOfCode_21_9.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e58ff0b-a9c0-486a-b820-84f8c8f67744" name="Default Changelist" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/AdventOfCode_21_9/Cell.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdventOfCode_21_9/assets/input2.txt" afterDir="false" />
+    <list default="true" id="9e58ff0b-a9c0-486a-b820-84f8c8f67744" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/AdventOfCode_21_9/Basin.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AdventOfCode_21_9/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AdventOfCode_21_9/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdventOfCode_21_9/Cell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AdventOfCode_21_9/Cell.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AdventOfCode_21_9/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AdventOfCode_21_9/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdventOfCode_21_9/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AdventOfCode_21_9/assets/input.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,15 +20,18 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/E6E6B40B-308C-4FE1-9C93-7C26C144C865/394/FileStream.Windows.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/E6E6B40B-308C-4FE1-9C93-7C26C144C865/41A/List.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D01EA799-E9C9-4F77-A043-C8ECB5387E2F/ff/7b2a568f/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/AdventOfCode_21_9/Point.cs" />
-      <option value="$PROJECT_DIR$/AdventOfCode_21_9/Cell.cs" />
       <option value="$PROJECT_DIR$/AdventOfCode_21_9/assets/input2.txt" />
       <option value="$PROJECT_DIR$/AdventOfCode_21_9/assets/input.txt" />
+      <option value="$PROJECT_DIR$/.gitignore" />
+      <option value="$PROJECT_DIR$/AdventOfCode_21_9/Cell.cs" />
       <option value="$PROJECT_DIR$/AdventOfCode_21_9/Program.cs" />
+      <option value="$PROJECT_DIR$/AdventOfCode_21_9/Basin.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2AtCp2Pmb6QgLLfegNYI3QJCrVv" />
@@ -73,7 +75,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1655819677028</updated>
-      <workItem from="1655819691685" duration="3871000" />
+      <workItem from="1655819691685" duration="4556000" />
+      <workItem from="1656013102123" duration="3078000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1655819775151</created>
@@ -82,13 +85,20 @@
       <option name="project" value="LOCAL" />
       <updated>1655819775151</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Adds calculation function">
+      <created>1655830532115</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655830532115</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -100,10 +110,31 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="Adds calculation function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adds calculation function" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/AdventOfCode_21_9/Program.cs</url>
+          <line>30</line>
+          <properties documentPath="C:\Users\Hassan\RiderProjects\AdventOfCode_21_9\AdventOfCode_21_9\Program.cs" initialLine="30" containingFunctionPresentation="method 'Main'">
+            <startOffsets>
+              <option value="790" />
+            </startOffsets>
+            <endOffsets>
+              <option value="850" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

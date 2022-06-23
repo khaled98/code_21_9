@@ -19,10 +19,42 @@ namespace AdventOfCode_21_9 {
 
       // [x,y]
       var cells = ParseCells(files);
+
+      // part I.
       var lowPoints = GetLowPoints(cells);
       var risk = lowPoints.Sum(cell => cell.Value + 1);
 
       Console.WriteLine("risk = " + risk);
+
+      // part II.
+
+      var basins = lowPoints.Select(lp => new Basin(lp)).ToList();
+
+      foreach (var b in basins)
+        b.BuildBasin(cells);
+
+      basins = basins.OrderByDescending(b => b.Count()).ToList();
+
+
+      var product = 1;
+      for (var i = 0; i < Math.Min(basins.Count, 3); i++) {
+        Console.WriteLine("Top Basin weight - " + i + " = " + basins[i].Count());
+        product *= basins[i].Count();
+      }
+
+      Console.WriteLine("Basins product = " + product);
+    }
+
+    public static CellNeighbours GetNeighbours(Cell cell, Cell[,] map) {
+      var y = cell.Y;
+      var x = cell.X;
+
+      var top = y - 1 >= 0 ? map[x, y - 1] : null;
+      var right = x + 1 < map.GetLength(0) ? map[x + 1, y] : null;
+      var bottom = x - 1 >= 0 ? map[x - 1, y] : null;
+      var left = y + 1 < map.GetLength(1) ? map[x, y + 1] : null;
+
+      return new CellNeighbours(top, right, bottom, left);
     }
 
     private static List<Cell> GetLowPoints(Cell[,] cells) {
@@ -32,15 +64,12 @@ namespace AdventOfCode_21_9 {
         for (var y = 0; y < cells.GetLength(1); y++) {
           var cell = cells[x, y];
 
-          var top = y - 1 >= 0 ? cells[x, y - 1] : null;
-          var right = x + 1 < cells.GetLength(0) ? cells[x + 1, y] : null;
-          var bottom = x - 1 >= 0 ? cells[x - 1, y] : null;
-          var left = y + 1 < cells.GetLength(1) ? cells[x, y + 1] : null;
+          var n = GetNeighbours(cell, cells);
 
-          var lowPoint = top == null || top.Value > cell.Value;
-          lowPoint &= right == null || right.Value > cell.Value;
-          lowPoint &= left == null || left.Value > cell.Value;
-          lowPoint &= bottom == null || bottom.Value > cell.Value;
+          var lowPoint = n.Top == null || n.Top.Value > cell.Value;
+          lowPoint &= n.Right == null || n.Right.Value > cell.Value;
+          lowPoint &= n.Left == null || n.Left.Value > cell.Value;
+          lowPoint &= n.Bottom == null || n.Bottom.Value > cell.Value;
 
           cell.LowPoint = lowPoint;
           if (lowPoint)
